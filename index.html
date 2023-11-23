@@ -6,6 +6,7 @@
     <title>Shopify</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
             <!-- * Navbar * -->
@@ -20,10 +21,28 @@
                 <input type="text" placeholder="Search">
             </label>
             <div class="navbar-notifications">
-                <div>
-                    <a href="#"><i class="fa-regular fa-bell"></i></a>
+                <div class="notifications-icon">
+                    <a href="#" id="notificationIcon"><i class="fa-regular fa-bell"></i></a>
                 </div>
-                <div class="navbar-profile">
+                <div class="notifications-alert" id="notificationAlert">
+                    <div class="alert-title">
+                        <h1>Alerts</h1>
+                        <div class="alert-icons">
+                            <a href="#">
+                                <span class="material-symbols-outlined">
+                                    filter_list
+                                </span>
+                            </a>
+                            <a href="#">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="alert-message">
+                        <p>Alerts about your store and account will show here</p>
+                    </div>
+                </div>
+                <div class="navbar-profile" tabindex="0">
                     <div class="navbar-profile-head">
                         <h1>Davii Collections</h1>
                     </div>
