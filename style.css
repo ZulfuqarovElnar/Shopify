@@ -161,7 +161,7 @@ nav{
     top: 65px;
     right: 15px;
     z-index: 11;
-    box-shadow: 0px 0px 1px 1px #f7f7f7;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .alert-title{
     display: flex;
@@ -229,7 +229,7 @@ nav{
     background-color: #fff;
     border-radius: 8px;
     z-index: 10;
-    box-shadow: 0px 0px 1px 1px #f7f7f7;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .profile-dropdown{
     padding: 5px;
@@ -286,9 +286,197 @@ nav{
 .profile-dropdown-gmail a h1{
     color: #322f33;
 }
+
+    /* Select Plan and Setup Guide */
+
+.select-section {
+    width: 100%;
+    margin: 30px 0 10px;
+    display: flex;
+    justify-content: center;
+}
+.select-plan{
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: 8px;
+    background-color: #1c1b1d;
+    color: #f0f0f0;
+}
+.select-plan div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.select-plan button{
+    background-color: #f0f0f0;
+    padding: 5px 8px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px 1px #616161;
+    border: none;
+    cursor: pointer;
+    transition: transform all 0.3s;
+}
+.select-plan button:hover{
+    background-color: #e3e3e3;
+}
+.select-plan button:focus{
+    outline: 2px solid #005BD3;
+}
+.select-plan i{
+    cursor: pointer;
+}
+
+.setup-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.setup-title{
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px 8px 0 0;
+    background-color: #f7f7f7;
+    padding: 20px 15px 10px;  
+    row-gap: 7px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+}
+
+.fa-angle-down, .fa-angle-up {
+    transition: transform 0.3s ease;
+}
+.setup-head{
+    display: flex;
+    justify-content: space-between;
+}
+.setup-head h1{
+    font-size: 16px;
+}
+
+.progress-bars{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.progress-bar {
+    max-width: 85px;
+    width: 100%;
+    height: 7px;
+    background-color: #d3d3d3;
+    border-radius: 5px;
+}
+
+.progress-indicator {
+    position: absolute;
+    height: 7px;
+    width: 1.25%;
+    background-color: #1c1b1d;
+    border-radius: 5px;
+}
+
+.customizes{
+    max-width: 650px;
+    width: 100%;
+    background-color: #f7f7f7;
+    border-radius: 0 0 8px 8px;
+    display: none;
+}
+.customize{ 
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 8px 0 3px;
+}
+
+.customize-head{ 
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 7px;
+    gap: 10px;
+    cursor: pointer;
+}
+.customize-head h1{
+    flex: 1;
+    font-size: 14px;
+    color: #322f33;
+}
+.customize-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px dashed #1c1b1d;
+}
+.customize-theme{
+    max-width: 100%;
+    display: none; 
+    flex-direction: row;
+    height: auto;
+    gap: 120px;
+    background-color: #f1f1f1;
+    margin: 4px;
+    padding: 10px 15px 10px 40px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.customize.customize-active .customize-theme {
+    display: block;
+}
+.customize-theme img{
+    width: 100px;
+    height: 65px;
+}
+.customize-theme div{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+.customize-theme div p{
+    font-size: 14px;
+}
+.customize-theme div a {
+    color: #005BD3;
+}
+
+.customize-theme div button {
+    width: 130px;
+    padding: 7px 10px;
+    background-color: #322f33;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.customize-theme div button:hover {
+    background-color: #616161;
+}
+
+.customize-theme div button:focus {
+    outline: 2px solid #005BD3;
+}
+.customize-product > a{
+    color: #1c1b1d !important;
+}
+
+/* Responsive mobile */
+
 @media (max-width: 768px) {
     .navbar-logo h1,
     .navbar-profile-head{
+        display: none;
+    }
+    .customize-theme img{
         display: none;
     }
     
@@ -303,4 +491,3 @@ nav{
         max-width: 100%;
     }
 }
-
