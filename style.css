@@ -5,6 +5,10 @@
 }
 body{
     background-color: #e3e3e3;
+    position: relative;
+}
+a{
+    text-decoration: none;
 }
 
         /* * Navbar * */
@@ -109,6 +113,7 @@ nav{
     background-color: #322f33;
     box-shadow: 0px 0px 1px 1px #616161;
     border-radius: 8px;
+    cursor: pointer;
 }
 .navbar-profile:hover,
 .navbar-profile:active{
@@ -135,7 +140,7 @@ nav{
     font-size: 14px;
 }
 
-
+    /* Notifications Dropdown */
 
 .material-symbols-outlined {
     font-variation-settings:
@@ -153,9 +158,9 @@ nav{
     color: #1c1b1d;
     border-radius: 8px;
     position: absolute;
-    z-index: 1;
-    margin-left: -160px;
-    margin-top: 195px;
+    top: 65px;
+    right: 15px;
+    z-index: 11;
     box-shadow: 0px 0px 1px 1px #f7f7f7;
 }
 .alert-title{
@@ -208,22 +213,94 @@ nav{
     display: block;
 }
 
+    /* Profile Dropdown */
+
+.navbar-profile-dropdown{
+    display: none;
+}
+.navbar-profile-dropdown.active-dropdown{
+    display: block;
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 10;
+    box-shadow: 0px 0px 1px 1px #f7f7f7;
+}
+.profile-dropdown{
+    padding: 5px;
+}
+.profile-dropdown a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0 5px;
+    margin:2px 0;
+    height: 34px;
+    gap: 10px;
+    font-size: 14px;
+    color: #322f33;
+}
+.profile-dropdown a:hover{
+    background-color: #e3e3e3;
+}
+.profile-dropdown a > div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.profile-dropdown h1{
+    font-size: 14px;
+    color: #322f33;
+}
+.profile-dropdown i{
+    font-size: 14px;
+    color: #322f33;
+}
+.check-icon{
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navbar-profile-logo{
+    width: 36px;
+}
+.profile-dropdown-group{
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+}
+.profile-dropdown-gmail a{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2px;
+    padding: 10px 5px;
+    height: 50px;
+}
+.profile-dropdown-gmail a h1{
+    color: #322f33;
+}
 @media (max-width: 768px) {
     .navbar-logo h1,
     .navbar-profile-head{
         display: none;
     }
-    .notifications-alert{
-        margin-left: -270px;
+    
+}
+@media (max-width: 400px) {
+    .navbar-profile-dropdown.active-dropdown {
+        right: 0;
+        max-width: 100%;
+    }
+    .notifications-alert.active{
+        right: 0;
+        max-width: 100%;
     }
 }
-@media (max-width:400px) {
-    .notifications-alert{
-        top:33%;
-        right: 0%;
-        left: 20%;
-        transform: translate(-20%, -90%);
-        margin: 0;
-    }
 
-}
